@@ -1,7 +1,3 @@
-# pip install -U langchain-ollama
-# pip install langchain
-# pip install streamlit
-
 import streamlit as st
 
 from langchain_ollama import ChatOllama
@@ -52,15 +48,15 @@ if submit and text:
 
         chat_history.append(prompt)
 
-        # st.write(chat_history)
+         st.write(chat_history)
 
         response = generate_response(chat_history)
 
         st.session_state['chat_history'].append({'user': text, 'assistant': response})
 
-        # st.write("response: ", response)
+         st.write("response: ", response)
 
-        # st.write(st.session_state['chat_history'])
+        #st.write(st.session_state['chat_history'])
 
 
 st.write('## Chat History')
